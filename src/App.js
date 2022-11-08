@@ -1,24 +1,21 @@
-import logo from "./logo.svg"
 import "./App.css"
+import { Cloudinary } from "@cloudinary/url-gen"
+import { AdvancedImage } from "@cloudinary/react"
 
 function App() {
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "ds3y9nbdn",
+    },
+  })
+
+  const myImage = cld.image(
+    "v1667830813/keith-misner-h0Vxgz5tyXA-unsplash_1_cyjt0g.jpg"
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. test test test
-        </p>
-        <p>massa mer test</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AdvancedImage className="background" cldImg={myImage} />
     </div>
   )
 }
