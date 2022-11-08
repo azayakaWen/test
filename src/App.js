@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div>
+      <h1 className="h1">im writing shit!</h1>
       <AdvancedImage className="background" cldImg={myImage} />
     </div>
   )
