@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "semantic-release": "semantic-release"
+    "commit": "cz"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +41,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/azayakaWen/test.git"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
